@@ -1,7 +1,7 @@
-def task1(module_list):
+def task1(moduleList):
     # What is the sum of the fuel requirements for all of the modules on your spacecraft?
     fuelSum = 0
-    for listitem in module_list:
+    for listitem in moduleList:
         fuelSum += calculateFuel(listitem)
     return fuelSum
 
