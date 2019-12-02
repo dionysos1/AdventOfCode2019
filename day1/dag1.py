@@ -6,12 +6,12 @@ def task1(moduleList):
     return fuelSum
 
 
-def task2(module_list):
+def task2(moduleList):
     # What is the sum of the fuel requirements for all of the modules on your spacecraft when also taking
     # into account the mass of the added fuel? (Calculate the fuel requirements for each module separately,
     # then add them all up at the end.)
     massSum = 0
-    for listitem in module_list:
+    for listitem in moduleList:
         fuelMass = calculateFuel(listitem)
 
         while fuelMass > 0:
