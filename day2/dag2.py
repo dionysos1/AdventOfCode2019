@@ -21,13 +21,30 @@ def runOpCode(sequence, sequenceIndex):
     return sequence
 
 
+def nounVerbProgram(original):
+
+    for noun in range(100):
+        for verb in range(100):
+            sequence = original[:]
+            sequence[1] = noun
+            sequence[2] = verb
+
+            if runProgram(sequence)[0] == 19690720:
+                return "output: {}".format(100 * sequence[1] + sequence[2])
+
+
 def main():
 
     with open("input.txt") as file:
         sequence = [int(number) for number in file.read().split(",")]
         sequence[1] = 12
         sequence[2] = 2
-        print(runProgram(sequence))
+
+        # Task 1
+        # print(runProgram(sequence))
+
+        # Task 2
+        print(nounVerbProgram(sequence))
 
 
 if __name__ == '__main__':
